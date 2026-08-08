@@ -26,7 +26,7 @@ class DragRopeTask(Task):
         )
 
         env = self._env
-        x_grip = jnp.array([[0.02, 0.0, 0.01]])
+        x_grip = jnp.array([[0.02, 0.0, 0.02]])
         self._initial_state = env.state(x_grip=x_grip)
 
         l = jnp.arange(env.params.num_nodes)[::-1] * env.params.segment_length
